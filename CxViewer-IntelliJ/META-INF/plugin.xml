@@ -1,0 +1,32 @@
+<idea-plugin version="2">
+  <id>com.checkmarx.intellij</id>
+  <name>CxViewer</name>
+  <version>8.90.0</version>
+  <vendor email="support@checkmarx.com" url="http://www.checkmarx.com">Checkmarx.com Ltd.</vendor>
+  <description>Checkmarx plugin for IntelliJ allows retrieving scan results from the Checkmarx scan server.
+
+        Full user's manual can be found here: http://www.checkmarx.com/instructions</description>
+  <change-notes/>
+  <idea-version since-build="111.69"/>
+  <depends>com.intellij.modules.lang</depends>
+  <application-components>
+    <component>
+      <interface-class>com.checkmarx.cxviewer.CxViewerPlugin</interface-class>
+      <implementation-class>com.checkmarx.cxviewer.CxViewerPlugin</implementation-class>
+    </component>
+  </application-components>
+  <project-components/>
+  <actions>
+    <group id="CxViewer.Menu" text="CxViewer" description="CxViewer menu" popup="true" icon="/com/checkmarx/cxviewer/resources/AppIcon16x16.png">
+      <add-to-group group-id="ProjectViewPopupMenuSettingsGroup" relative-to-action="OpenModuleSettings" anchor="after"/>
+      <action id="CxViewer.Scan" class="com.checkmarx.cxviewer.tasks.ScanModule" text="_Scan" keymap="  " description="Scan a module" icon="/com/checkmarx/cxviewer/resources/Export16.gif"/>
+      <action id="CxViewer.Bind" class="com.checkmarx.cxviewer.tasks.BindModule" text="_Retrieve Results" description="Bind a module" icon="/com/checkmarx/cxviewer/resources/Import16.gif"/>
+    </group>
+  </actions>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="CxGrid" anchor="bottom" secondary="false" icon="/com/checkmarx/cxviewer/resources/appicon13x13.png" canCloseContents="true" factoryClass="com.checkmarx.cxviewer.toolwindow.CxGridTreeToolWindowFactory"/>
+    <toolWindow id="CxPath" anchor="right" icon="/com/checkmarx/cxviewer/resources/appicon13x13.png" canCloseContents="true" factoryClass="com.checkmarx.cxviewer.toolwindow.CxPathToolWindowFactory"/>
+    <applicationService serviceInterface="com.checkmarx.cxviewer.settings.CxViewerSettings" serviceImplementation="com.checkmarx.cxviewer.settings.CxViewerSettings"/>
+    <applicationConfigurable instance="com.checkmarx.cxviewer.ui.CxUrlAndCredentialsConfigurable" dynamic="true"/>
+  </extensions>
+</idea-plugin>
