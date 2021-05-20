@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="softwares_and_plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/microfrontends-frontenddeveloperlovemeetup-180131084636.pdf.zip!/" />
+      <root url="jar://$PROJECT_DIR$/postgresql-42.2.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mongo-jdbc-standalone-1.8.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

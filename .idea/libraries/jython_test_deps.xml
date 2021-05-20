@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jython_test_deps">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/python/helpers/pydev/jython_test_deps/ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/python/helpers/pydev/jython_test_deps/junit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
