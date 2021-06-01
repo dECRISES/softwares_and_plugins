@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Jupyter Notebook Preview</title>
+
+  <link rel="stylesheet" href="static/css/github-markdown.css"/>
+  <link rel="stylesheet" href="static/generated/css/ipywidgets.css"/>
+
+
+  <script src="static/js/marked.min.js"></script>
+  <script src="static/generated/js/main.js"></script>
+  <script src="static/generated/js/ipywidgets.js"></script>
+
+
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script type="text/javascript">
+    try {
+      MathJax.Hub.Config({
+                           displayAlign: "left",
+                           messageStyle: "none",
+                           "fast-preview": {disabled: true},
+                           tex2jax: {preview: "none", inlineMath: [["$", "$"]]}
+                         });
+    }
+    catch (e) {
+      console.log('MathJax is not available')
+    }
+  </script>
+
+  <!-- Babel is used to run JSX. For the details see:
+    https://reactjs.org/docs/add-react-to-a-website.html
+
+    The performance may be improved by providing scripts precompiled with Babel,
+    but I didn't notice any substantial improvements of loading time, so
+    for the sake of simplicity scripts are compiled on loading now.
+  -->
+  <!--  <script src="js/lib/babel.min.js"></script>-->
+
+  <!--
+   To support testing mode uncomment the following block. Then, open this document in browser with webserver
+  -->
+  <!-- TEST ENABLE START -->
+  <!--<link rel="stylesheet" href="static/generated/css/jupyter_darcula.css"/>-->
+  <!--<script src="testData/testData.js"></script>-->
+  <!--<script type="module">-->
+  <!--  // This is for testing purposes only. Should be commented off or deleted in the JavaFX preview-->
+  <!--  frontendGateway.trusted = true;-->
+<!--  frontendGateway.offscreenMode = false;-->
+  <!--  window.onload = () => {-->
+  <!--    window.main(TEST_NOTEBOOK);-->
+  <!--  };-->
+  <!--</script>-->
+  <!--   TEST ENABLE END-->
+
+
+  <link rel="stylesheet" href="static/generated/css/jupyter.css"/>
+</head>
+<body>
+<div id="root">
+  <span id="wait">Please, wait</span>
+  <!-- Root element to attach React components to -->
+</div>
+<!-- Virtual space at file bottom in the preview (see PY-32491):TODO : Remove of offscreen -->
+<div style="height:100vh" id="jb-notebook-virtual-space"></div>
+</body>
+</html>
